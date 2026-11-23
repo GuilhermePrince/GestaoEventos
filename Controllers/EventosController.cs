@@ -1,5 +1,6 @@
 using GerenciamentoEventos.Models;
 using Microsoft.AspNetCore.Mvc;
+using GerenciamentoEventos.ViewModels;
 
 namespace GerenciamentoEventos.Controllers
 {
@@ -36,7 +37,16 @@ namespace GerenciamentoEventos.Controllers
             return RedirectToAction("Index");
         }
 
-        
+        [HttpGet]
+        public IActionResult Buscar()
+        {
+            return View(new BuscaEventoViewModel());
+        }
+        [HttpPost]
+        public IActionResult Buscar(BuscaEventoViewModel vm)
+        {
+            
+        }
         
     }
 }
