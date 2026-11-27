@@ -42,10 +42,33 @@ namespace GerenciamentoEventos.Controllers
         {
             return View(new BuscaEventoViewModel());
         }
+
         [HttpPost]
         public IActionResult Buscar(BuscaEventoViewModel vm)
         {
-            
+            string? dataString = vm.DataInicial.ToString();
+
+            if(!string.IsNullOrWhiteSpace(vm.NomeBusca) || !string.IsNullOrWhiteSpace(vm.LocalBusca) || !string.IsNullOrWhiteSpace(dataString))
+            {
+                if(!string.IsNullOrWhiteSpace(vm.NomeBusca))
+                {
+                    vm.Resultados.AddRange(_eventos
+                        .Where(e => e.Nome.Contains(vm.NomeBusca, StringComparison.OrdinalIgnoreCase)));
+                }
+                if(!string.IsNullOrWhiteSpace(vm.LocalBusca))
+                {
+                    vm.Resultados.AddRange(_eventos
+                        .Where(e => e.Local.Contains(vm.LocalBusca, StringComparison.OrdinalIgnoreCase)));
+                }
+                if(!string.IsNullOrWhiteSpace(dataString))
+                {
+                    vm.Resultados.AddRange(_eventos
+                    .Where(e => e.DataEvento.ToString().Contains(dataString)));
+                }
+
+
+            }
+                return View(vm);
         }
         
     }   

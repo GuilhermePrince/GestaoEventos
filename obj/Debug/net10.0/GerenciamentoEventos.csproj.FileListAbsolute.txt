@@ -91,3 +91,4 @@ C:\Users\54135432808\Desktop\ProjetoCS\GerenciamentoEventos\obj\Debug\net10.0\re
 C:\Users\54135432808\Desktop\ProjetoCS\GerenciamentoEventos\obj\Debug\net10.0\GerenciamentoEventos.pdb
 C:\Users\54135432808\Desktop\ProjetoCS\GerenciamentoEventos\obj\Debug\net10.0\GerenciamentoEventos.genruntimeconfig.cache
 C:\Users\54135432808\Desktop\ProjetoCS\GerenciamentoEventos\obj\Debug\net10.0\ref\GerenciamentoEventos.dll
+C:\Users\54135432808\Desktop\ProjetoCS\GerenciamentoEventos\obj\Debug\net10.0\GerenciamentoEventos.sourcelink.json

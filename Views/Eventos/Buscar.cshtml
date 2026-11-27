@@ -1,0 +1,24 @@
+@model BuscaEventoViewModel
+@{
+    ViewData["Title"] = "Buscar";
+}
+
+<h1>Busque um evento pelo <strong>Nome</strong>, <strong>Local</strong> ou <strong>Data</strong></h1>
+
+<form asp-controller="Eventos" asp-action="Buscar" method="post">
+    <p>
+        <label asp-for="NomeBusca">Nome</label>
+        <input asp-for="NomeBusca" />
+    </p>
+    <p>
+        <label for="LocalBusca">Local</label>
+        <input for="LocalBusca" />
+    </p>
+    <p>
+        <label asp-for="DataInicial">Data do Evento</label>
+        <input asp-for="DataInicial" />
+        <span asp-validation-for="DataInicial" class="erro"></span>
+    </p>
+
+
+</form>
